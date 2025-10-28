@@ -1,0 +1,456 @@
+/* 🌙 DARK MODE GLOBAL STYLE */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f172a; /* خلفية داكنة عامة */
+  color: #e5e7eb;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  width: 100%;
+  background-color: #1e293b;
+  color: #e5e7eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav button {
+  background-color: #0ea5e9;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover {
+  background-color: #38bdf8;
+}
+
+/* ===== PAGE CONTAINERS ===== */
+.dashboard-container,
+.income-container,
+.expenses-container,
+.reports-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* أو center إذا بدك النص بالمنتصف العمودي */
+  align-items: center;
+  padding: 3rem 1rem;
+  background-color: transparent;
+}
+
+/* ===== TITLES ===== */
+h1 {
+  color: #38bdf8;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* ===== FORMS ===== */
+form {
+  width: 100%;
+  max-width: 450px;
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #334155;
+  color: #e5e7eb;
+}
+
+button[type="submit"] {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #16a34a;
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background-color: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 2rem;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  color: #e5e7eb;
+  border-bottom: 1px solid #334155;
+}
+
+th {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== COLORS FOR AMOUNTS ===== */
+.income {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.expense {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  
+  form, table {
+    width: 90%;
+  }
+}
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;   /* يخلي المحتوى فوق بعض */
+  align-items: center;      /* توسيط أفقي */
+  justify-content: center;  /* توسيط عمودي */
+  min-height: 100vh;        /* ياخد ارتفاع الشاشة */
+  padding: 20px;
+}
+
+.page h1 {
+  margin-bottom: 20px;
+}
+
+.box {
+  width: min(500px, 90%);                     /* نفس الطول السابق */
+  background: rgba(15, 25, 50, 0.85);         /* 🔹 خلفية داكنة شفافة قليلاً */
+  border-radius: 14px;                        /* 🔹 حواف ناعمة */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35); /* 🔹 ظل ناعم من الخارج */
+  padding: 24px;                              /* 🔹 مسافة داخلية مريحة */
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);/* 🔹 خط حدود خفيف */
+  backdrop-filter: blur(6px);                 /* 🔹 تأثير زجاجي ناعم */
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* عند تمرير الماوس عليه (hover) */
+.box:hover {
+  background: rgba(18, 30, 60, 0.9);          /* 🔹 أغمق شوي عند الهوفر */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+/* ========== العناصر داخل البوكس ========== */
+.box label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.box input,
+.box select {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(234, 226, 226, 0.12);
+  background: rgba(255, 255, 255, 0.07);      /* 🔹 خلفية غامقة ناعمة للحقول */
+  color: #b1a7a7;
+  font-size: 0.95rem;
+}
+
+.box input::placeholder {
+  color: rgba(247, 234, 234, 0.4);
+}
+
+/* زر الإضافة */
+.box button {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #79a6c7, #686caf);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(208, 212, 223, 0.3);
+}
+/* ===== Navbar Styling ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* يخلي الروابط يسار واللوغ أوت يمين */
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(86, 86, 86, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* روابط التنقل */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4db5ff;
+}
+
+/* زر تسجيل الخروج */
+.logout-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #005fcc;
+}
+.dashboard-container {
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.dashboard-title {
+  color: #00bfff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* ===== Summary Cards ===== */
+.summary-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px 30px;
+  border-radius: 14px;
+  width: 250px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.income-card {
+  border-top: 3px solid #00ff7f;
+}
+
+.expense-card {
+  border-top: 3px solid #ff5555;
+}
+
+.balance-card {
+  border-top: 3px solid #00bfff;
+}
+
+/* ===== Spending Overview ===== */
+.spending-box {
+  background: rgba(255, 255, 255, 0.05);
+  width: min(600px, 90%);
+  margin: 0 auto 40px;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  height: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #00bfff, #00ff7f);
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 8px;
+  color: white !important; /* نحط !important حتى يجبر اللون يظهر */
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3); /* لمعة خفيفة */
+}
+
+.income-card p {
+  color: #00ff7f !important;
+}
+
+.expense-card p {
+  color: #ff5555 !important;
+}
+
+.balance-card p {
+  color: #00bfff !important;
+} 
+
+.register-page {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+/* بوكس التسجيل بالنص تمامًا */
+.register-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  width: min(400px, 90%);
+  text-align: center;
+  color: white;
+}
+
+.register-box h2 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.register-box input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.register-box input::placeholder {
+  color: #bbb;
+}
+
+.register-box button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #00bfff, #007bff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-box button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #00d4ff, #0099ff);
+}
+
